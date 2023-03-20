@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setPersonaInfo() {
         personasBBDD = dbHelper.getReadableDatabase();
-        Cursor cursor = personasBBDD.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAS + " GROUP BY edad" , null);
+        Cursor cursor = personasBBDD.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAS + " ORDER BY edad" , null);
         while (cursor.moveToNext()){
             listaPersonas.add(new Persona(cursor.getString(cursor.getColumnIndexOrThrow("dni")),cursor.getString(cursor.getColumnIndexOrThrow("nombre")),
                     cursor.getString(cursor.getColumnIndexOrThrow("apellidos")),cursor.getInt(cursor.getColumnIndexOrThrow("edad")),
