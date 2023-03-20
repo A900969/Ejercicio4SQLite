@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setPersonaInfo() {
         personasBBDD = dbHelper.getReadableDatabase();
-        Cursor cursor = personasBBDD.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAS, null);
+        Cursor cursor = personasBBDD.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAS + " GROUP BY edad" , null);
         while (cursor.moveToNext()){
             listaPersonas.add(new Persona(cursor.getString(cursor.getColumnIndexOrThrow("dni")),cursor.getString(cursor.getColumnIndexOrThrow("nombre")),
-                    cursor.getString(cursor.getColumnIndexOrThrow("apellidos")),cursor.getColumnIndexOrThrow("edad"),
+                    cursor.getString(cursor.getColumnIndexOrThrow("apellidos")),cursor.getInt(cursor.getColumnIndexOrThrow("edad")),
                     cursor.getString(cursor.getColumnIndexOrThrow("direccion"))));
         }
 
