@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private void insertaPersonas() {
         addPersonaInfo("45623568T", "Pepe", "Rodríguez de la Fuente", 16 , "C/Romero 14" );
         addPersonaInfo("45782154M", "Rocío", "Gutierrez Gómez", 23 , "C/Tordesillas 25" );
-        addPersonaInfo("52368954B", "Manuel", "Díaz Hurtado", 42 , "C/San Pío XII 34" );
+        addPersonaInfo("52368954B", "Juan", "Díaz Hurtado", 42 , "C/San Pío XII 34" );
         addPersonaInfo("58471253F", "Rosa", "Benítez Quintero", 31 , "C/Picasso 3" );
         addPersonaInfo("14253698V", "Francisca", "Altúnez Fraile ", 53 , "C/Cruz 45" );
     }
